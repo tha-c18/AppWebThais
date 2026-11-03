@@ -1,7 +1,8 @@
-﻿
-@page "/processos"
+﻿@page "/processos"
+
 @using AppWebThais.Model
 @using AppWebThais.DAO
+
 @inject ProcessoDAO ProcessoDAO
 
 <PageTitle>Processos - Sistema de Controle de Processos</PageTitle>
@@ -42,21 +43,21 @@
                         <td>@processo.Assunto</td>
                         <td>@processo.Situacao</td>
 
-                        <!-- 2.2 - Botões de ações -->
+                        <!-- Botões de ações -->
                         <td class="text-end">
                             <div class="btn-group btn-group-sm">
 
                                 <!-- Botão Editar -->
                                 <a href="@($"/processos/editar/{processo.Id}")"
-                                   class="btn btn-light border text-primary"
-                                   title="Editar">
+                                       class="btn btn-light border text-primary"
+                                       title="Editar">
                                     <i class="bi bi-pencil"></i>
                                 </a>
 
                                 <!-- Botão Excluir -->
-                                <a href="#"
-                                   class="btn btn-light border text-danger"
-                                   title="Excluir">
+                                <a href="@($"/processos/excluir/{processo.Id}")"
+                                       class="btn btn-light border text-danger"
+                                       title="Excluir">
                                     <i class="bi bi-trash"></i>
                                 </a>
 
